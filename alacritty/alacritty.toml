@@ -23,3 +23,6 @@ style = "Italic"
 [terminal.shell]
 program = "/sbin/zsh"
 args = ["-l"]
+
+[colors.primary]
+background = "#1f1d2e"

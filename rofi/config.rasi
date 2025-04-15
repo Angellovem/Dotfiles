@@ -1,0 +1,8 @@
+@theme "~/.config/rofi/themes/rose.rasi"
+
+configuration {
+    show-icons: true;
+    drun-display-format: "{icon} {name}";
+    icon-theme: "Papirus";
+}
+

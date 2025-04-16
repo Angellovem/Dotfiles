@@ -67,7 +67,7 @@ keys = [
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
     # Screenshots
-    Key([mod], "s", lazy.spawn("maim -s ~/Pictures/Screenshots/screenshot_$(date +%Y-%m-%d-%H%M%S).png")),
+    Key([mod], "s", lazy.spawn("bash -c 'maim -s | tee ~/Pictures/Screenshots/screenshot_$(date +%Y-%m-%d-%H%M%S).png | xclip -selection clipboard -t image/png'")),
     # Rofi
     Key([mod], "d", lazy.spawn("rofi -show drun -theme ~/.config/rofi/themes/rose.rasi"), desc="Open Rofi app launcher"),
     Key([mod], "p", lazy.spawn(os.path.expanduser("~/.config/rofi/scripts/powermenu.sh")), desc="Open Rofi power menu"),

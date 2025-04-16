@@ -66,8 +66,9 @@ keys = [
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
     # Screenshots
     Key([mod], "s", lazy.spawn("maim -s ~/Pictures/Screenshots/screenshot_$(date +%Y-%m-%d-%H%M%S).png")),
-    # Rofi App launcher
-    Key([mod], "d", lazy.spawn("rofi -show drun -theme ~/.config/rofi/themes/rose.rasi"), desc="Launch Rofi"),
+    # Rofi
+    Key([mod], "d", lazy.spawn("rofi -show drun -theme ~/.config/rofi/themes/rose.rasi"), desc="Open Rofi app launcher"),
+    Key([mod], "p", lazy.spawn(os.path.expanduser("~/.config/rofi/scripts/powermenu.sh")), desc="Open Rofi power menu"),
     # Toggle between split and unsplit sides of stack.
     Key(
         [mod, "shift"],

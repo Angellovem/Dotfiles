@@ -120,83 +120,11 @@ mouse = [
     Click([mod], "Button2", lazy.window.bring_to_front()),
 ]
 
-# Widget defaults
-widget_defaults = dict(
-    font="RobotoMono Nerd Font Mono",
-    fontsize=14,
-    padding=3,
-)
-extension_defaults = widget_defaults.copy()
-
-# Left, center, and right widgets
-def left_widgets():
-    return [
-        widget.GroupBox(
-            highlight_method="line",
-            active=colors["fg0"],
-            inactive=colors["subtle"],
-            this_current_screen_border=colors["accent"],
-            other_screen_border=colors["red"],
-            padding=5,
-            disable_drag=True,
-        ),
-    ]
-
-def center_widgets():
-    return [
-        widget.Spacer(length=bar.STRETCH),
-        widget.Clock(
-            format="%Y-%m-%d (%a) %I:%M %p",
-            foreground=colors["fg0"]
-        ),
-        widget.Spacer(length=bar.STRETCH),
-    ]
-
-def right_widgets():
-    return [
-        widget.CPU(
-            format="CPU {load_percent}%",
-            foreground=colors["accent"],
-        ),
-        widget.Sep(linewidth=0, padding=6),
-        widget.GenPollText(
-            update_interval=1800,
-            func=lambda: "Bogotá~17°C",
-            foreground=colors["fg0"]
-        ),
-        widget.Sep(linewidth=0, padding=6),
-        widget.Battery(
-            format="Battery {percent:2.0%} {char}",
-            charge_char="⚡",
-            discharge_char="🔋",
-            full_char="✔️",
-            foreground=colors["fg0"]
-        ),
-    ]
-
-def default_widgets():
-    return left_widgets() + center_widgets() + right_widgets()
 
 # Screens configuration
 screens = [
-    Screen(
-        top=bar.Bar(
-            default_widgets(),
-            24,
-            background=colors["bg"],
-            opacity=0.8,
-            margin=[4, 8, 0, 8],
-        )
-    ), 
-    Screen(
-        top=bar.Bar(
-            default_widgets(),
-            24,
-            background=colors["bg"],
-            opacity=0.8,
-            margin=[4, 8, 0, 8],
-        )
-    )
+    Screen(top=bar.Gap(10)), 
+    Screen(top=bar.Gap(10))
 ]
 
 # Floating layout settings

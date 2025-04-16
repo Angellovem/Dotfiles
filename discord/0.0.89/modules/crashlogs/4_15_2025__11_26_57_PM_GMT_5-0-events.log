@@ -1,0 +1,26 @@
+4/15/2025, 11:26:57 PM GMT-5 0: 
+
+----------------------------------------------
+4/15/2025, 11:26:57 PM GMT-5 1: Discord starting: {"releaseChannel":"stable","version":"0.0.89"}, modulepath: /home/angelem/.config/discord/0.0.89/modules
+4/15/2025, 11:26:57 PM GMT-5 2: ✅ webContents.created web1 ""
+4/15/2025, 11:26:57 PM GMT-5 3: ✅ window.created win1 "discord"
+4/15/2025, 11:26:57 PM GMT-5 4: ✅ webContents.did-finish-load web1
+4/15/2025, 11:27:10 PM GMT-5 5: before-quit
+4/15/2025, 11:27:31 PM GMT-5 0: 
+
+----------------------------------------------
+4/15/2025, 11:27:31 PM GMT-5 1: Discord starting: {"releaseChannel":"stable","version":"0.0.89"}, modulepath: /home/angelem/.config/discord/0.0.89/modules
+4/15/2025, 11:27:31 PM GMT-5 2: ✅ webContents.created web1 ""
+4/15/2025, 11:27:31 PM GMT-5 3: ✅ window.created win1 "discord"
+4/15/2025, 11:27:31 PM GMT-5 4: ✅ webContents.did-finish-load web1
+4/15/2025, 11:27:34 PM GMT-5 5: before-quit
+4/15/2025, 11:27:34 PM GMT-5 6: window.close win1
+4/15/2025, 11:27:48 PM GMT-5 0: 
+
+----------------------------------------------
+4/15/2025, 11:27:48 PM GMT-5 1: Discord starting: {"releaseChannel":"stable","version":"0.0.89"}, modulepath: /home/angelem/.config/discord/0.0.89/modules
+4/15/2025, 11:27:48 PM GMT-5 2: ✅ webContents.created web1 ""
+4/15/2025, 11:27:48 PM GMT-5 3: ✅ window.created win1 "discord"
+4/15/2025, 11:27:49 PM GMT-5 4: ✅ webContents.did-finish-load web1
+4/15/2025, 11:27:51 PM GMT-5 5: before-quit
+4/15/2025, 11:27:51 PM GMT-5 6: window.close win1

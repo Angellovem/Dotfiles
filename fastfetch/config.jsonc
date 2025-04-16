@@ -18,10 +18,6 @@
     "colors"
   ],
   "moduleConfigs": {
-    "logo": {
-      "type": "ascii",
-      "source": "arch",
-      "colors": ["magenta"]
-    }
+    "logo": "kali",
   }
 }

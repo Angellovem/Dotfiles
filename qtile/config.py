@@ -56,6 +56,14 @@ keys = [
     Key([mod, "control"], "j", lazy.layout.grow_down(), desc="Grow window down"),
     Key([mod, "control"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
+    # Volume Handlers
+    Key([mod], "F7", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
+    Key([mod], "F6", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
+    Key([mod], "F5", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+    # Knob Volume Hanlder
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
+    Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
     # Rofi App launcher
     Key([mod], "d", lazy.spawn("rofi -show drun -theme ~/.config/rofi/themes/rose.rasi"), desc="Launch Rofi"),
     # Toggle between split and unsplit sides of stack.

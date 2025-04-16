@@ -36,6 +36,8 @@ def autostart():
 
 mod = "mod4"
 terminal = guess_terminal()
+wallpaper = os.path.expanduser("~/Wallpapers/pixelart_pokemon_rayquaza_forest_16x9.png")
+wallpaper2 = os.path.expanduser("~/Wallpapers/pixelart_pokemon_rayquaza_forest_16x9.png")
 
 # Key bindings
 keys = [
@@ -69,6 +71,7 @@ keys = [
     # Rofi
     Key([mod], "d", lazy.spawn("rofi -show drun -theme ~/.config/rofi/themes/rose.rasi"), desc="Open Rofi app launcher"),
     Key([mod], "p", lazy.spawn(os.path.expanduser("~/.config/rofi/scripts/powermenu.sh")), desc="Open Rofi power menu"),
+    Key([mod], "w", lazy.spawn(os.path.expanduser("~/.config/rofi/scripts/wallpaper_selector.sh")), desc="Open Rofi wallpaper selector"),
     # Toggle between split and unsplit sides of stack.
     Key(
         [mod, "shift"],

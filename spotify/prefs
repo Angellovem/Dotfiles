@@ -2,13 +2,13 @@ autologin.blob="kE04R6+fntk5AjIFN3CXJgi1++mSJUaSGkg43HV2ldyoMh+tPJcuh0sIXj4yhh5t
 autologin.canonical_username="22jf4j3rrsiknynx6ympxivzy"
 autologin.saved_credentials="{\"22jf4j3rrsiknynx6ympxivzy\":[\"22jf4j3rrsiknynx6ympxivzy\",\"kE04R6+fntk5AjIFN3CXJgi1++mSJUaSGkg43HV2ldyoMh+tPJcuh0sIXj4yhh5tTofVIEySerl7JzpRUgQqPt/rnTn22J3dM6JHAdSqiTg43gq6rcy4qUBRFoGsnXZ5n5emXIgBCdxyJN1p6p88aCa2n3c6JWRezrpxxZmDlKbswGlh3/5Cq/bIxnGoSBeBLSpCf3iLS2dydMr3ukqJi7k2WhpJMw9FkSjKAiRQ0qzMGXpmTRmShWHdFrYGVIDJfeos7dgYsYCANTcF+6z6Azgx5lAGqzSXjDJB3j43NJ4=\"]}"
 app.window.state.saved=true
-app.window.position.width=924
+app.window.position.width=1884
 es.send-on-startup=true
 core.clock_delta=0
 autologin.username="22jf4j3rrsiknynx6ympxivzy"
 app.window.position.saved=true
-app.window.position.height=1020
-app.window.position.y=42
+app.window.position.height=1016
+app.window.position.y=46
 storage.last-location="/home/angelem/.cache/spotify/Storage"
-app.window.position.x=978
+app.window.position.x=18
 app.last-launched-version="1.2.60.564.gcc6305cb"

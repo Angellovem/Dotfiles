@@ -140,7 +140,7 @@ layouts = [
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
-    # layout.TreeTab(),
+    # layout.TreeTab(**layout_theme),
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
@@ -169,46 +169,87 @@ mouse = [
 
 widget_defaults = dict(
     font="RobotoMono Nerd Font Mono",
-    fontsize=12,
+    fontsize=14,
     padding=3,
 )
 extension_defaults = widget_defaults.copy()
 
+colors = {
+    "bg": "#232136",
+    "fg": "#e0def4",
+    "red": "#eb6f92",
+    "accent": "#c4a7e7",
+    "subtle": "#393552"
+}
+
+def left_widgets():
+    return [
+        widget.GroupBox(
+            highlight_method="line",
+            active=colors["fg"],
+            inactive=colors["subtle"],
+            this_current_screen_border=colors["accent"],
+            other_screen_border=colors["red"],
+            padding=5,
+            disable_drag=True,
+        ),
+    ]
+
+def center_widgets():
+    return [
+        widget.Spacer(length=bar.STRETCH),
+        widget.Clock(
+            format="%Y-%m-%d (%a) %I:%M %p",
+            foreground=colors["fg"]
+        ),
+        widget.Spacer(length=bar.STRETCH),
+    ]
+
+def right_widgets():
+    return [
+        widget.CPU(
+            format="CPU {load_percent}%",
+            foreground=colors["accent"],
+        ),
+        widget.Sep(linewidth=0, padding=6),
+        widget.GenPollText(
+            update_interval=1800,
+            func=lambda: "Bogotá~17°C",
+            foreground=colors["fg"]
+        ),
+        widget.Sep(linewidth=0, padding=6),
+        widget.Battery(
+            format="Battery {percent:2.0%} {char}",
+            charge_char="⚡",
+            discharge_char="🔋",
+            full_char="✔️",
+            foreground=colors["fg"]
+        ),
+    ]
+
+def default_widgets():
+    return left_widgets() + center_widgets() + right_widgets()
+
 screens = [
     Screen(
         top=bar.Bar(
-            [
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-            ],
+            default_widgets(),
             24,
-        ),
-    ),
+            background=colors["bg"],
+            opacity=0.95,
+            margin=[4, 8, 0, 8],
+        )
+    ), 
     Screen(
         top=bar.Bar(
-            [
-                widget.GroupBox(),
-                widget.Prompt(),
-                widget.Chord(
-                    chords_colors={
-                        "launch": ("#ff0000", "#ffffff"),
-                    },
-                    name_transform=lambda name: name.upper(),
-                ),
-                widget.Clock(format="%Y-%m-%d %a %I:%M %p"),
-            ],
+            default_widgets(),
             24,
-        ),
-    ),
+            background=colors["bg"],
+            opacity=0.95,
+            margin=[4, 8, 0, 8],
+        )
+    )
 ]
-
 # .d8888b.  888          888               888 
 #d88P  Y88b 888          888               888 
 #888    888 888          888               888 

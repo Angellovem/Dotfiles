@@ -36,8 +36,8 @@ def autostart():
 
 mod = "mod4"
 terminal = guess_terminal()
-wallpaper = os.path.expanduser("~/Wallpapers/pixelart_pokemon_rayquaza_forest_16x9.png")
-wallpaper2 = os.path.expanduser("~/Wallpapers/pixelart_pokemon_rayquaza_forest_16x9.png")
+wallpaper = os.path.expanduser("/home/angelem/Wallpapers/Day_space_field.png")
+wallpaper2 = os.path.expanduser("/home/angelem/Wallpapers/Day_space_field.png")
 
 # Key bindings
 keys = [
@@ -66,6 +66,9 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%")),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%")),
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle")),
+    # Screen brightness
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl -d amdgpu_bl1 set +10%")),
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl -d amdgpu_bl1 set 10%-")),
     # Screenshots
     Key([mod], "s", lazy.spawn("bash -c 'maim -s | tee ~/Pictures/Screenshots/screenshot_$(date +%Y-%m-%d-%H%M%S).png | xclip -selection clipboard -t image/png'")),
     # Rofi
@@ -137,8 +140,8 @@ mouse = [
 
 # Screens configuration
 screens = [
-    Screen(top=bar.Gap(10)), 
-    Screen(top=bar.Gap(10))
+    Screen(), 
+    Screen()
 ]
 
 # Floating layout settings

@@ -1,0 +1,33 @@
+[Default Applications]
+x-scheme-handler/jetbrains=jetbrains-toolbox.desktop
+x-scheme-handler/roblox-studio=roblox-studio.desktop
+x-scheme-handler/roblox-player=roblox-player.desktop
+x-scheme-handler/roblox-studio-auth=roblox-studio-auth.desktop
+x-scheme-handler/roblox=roblox-player.desktop
+application/x-roblox-rbxl=roblox-studio.desktop
+application/x-roblox-rbxlx=roblox-studio.desktop
+x-scheme-handler/postman=Postman.desktop
+text/html=firefox.desktop
+x-scheme-handler/http=firefox.desktop
+x-scheme-handler/https=firefox.desktop
+x-scheme-handler/about=google-chrome.desktop
+x-scheme-handler/unknown=google-chrome.desktop
+x-scheme-handler/chrome=firefox.desktop
+application/x-extension-htm=firefox.desktop
+application/x-extension-html=firefox.desktop
+application/x-extension-shtml=firefox.desktop
+application/xhtml+xml=firefox.desktop
+application/x-extension-xhtml=firefox.desktop
+application/x-extension-xht=firefox.desktop
+
+[Added Associations]
+x-scheme-handler/http=firefox.desktop;
+x-scheme-handler/https=firefox.desktop;
+x-scheme-handler/chrome=firefox.desktop;
+text/html=firefox.desktop;
+application/x-extension-htm=firefox.desktop;
+application/x-extension-html=firefox.desktop;
+application/x-extension-shtml=firefox.desktop;
+application/xhtml+xml=firefox.desktop;
+application/x-extension-xhtml=firefox.desktop;
+application/x-extension-xht=firefox.desktop;

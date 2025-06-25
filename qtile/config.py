@@ -36,8 +36,8 @@ def autostart():
 
 mod = "mod4"
 terminal = guess_terminal()
-wallpaper = os.path.expanduser("/home/angelem/Wallpapers/Day_space_field.png")
-wallpaper2 = os.path.expanduser("/home/angelem/Wallpapers/Day_space_field.png")
+wallpaper = os.path.expanduser("/home/angelem/Wallpapers/pixelart_pokemon_rayquaza_forest_16x9.png")
+wallpaper2 = os.path.expanduser("/home/angelem/Wallpapers/pixelart_pokemon_rayquaza_forest_16x9.png")
 
 # Key bindings
 keys = [
@@ -119,15 +119,15 @@ for i in groups:
 
 # Layout theme
 layout_theme = {
-    "border_width": 3,
-    "margin": 15,
+    "border_width": 0,
+    "margin": 5,
     "border_focus": colors["accent_color"],
     "border_normal": "#44415a"
 }
 
 # Layout
 layouts = [
-    layout.MonadTall(**layout_theme),
+    layout.Bsp(**layout_theme),
 ]
 
 # Drag floating layouts
@@ -169,5 +169,5 @@ wl_input_rules = None
 wl_xcursor_theme = None
 wl_xcursor_size = 24
 
-wmname = "Angel's"
+wmname = "Qtile"
 

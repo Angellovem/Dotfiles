@@ -130,6 +130,8 @@ layouts = [
     layout.Bsp(**layout_theme),
 ]
 
+
+
 # Drag floating layouts
 mouse = [
     Drag([mod], "Button1", lazy.window.set_position_floating(), start=lazy.window.get_position()),

@@ -32,6 +32,8 @@ The setup script will:
 - **Text Editor**: Neovim configuration
 
 ### Additional Configurations
+- **Zsh**: Custom shell configuration with Oh My Zsh
+- **Development**: Go language and NVM (Node.js) setup
 - **GTK**: Theming and file chooser preferences
 - **User Directories**: Custom XDG directory setup
 - **MIME Types**: Default application associations
@@ -55,6 +57,12 @@ The setup script installs these packages automatically:
 - `maim` - Screenshots
 - `brightnessctl` - Brightness control
 - `feh` - Wallpaper setter
+
+### Development Tools
+- `go` - Go programming language
+- `neovim` - Text editor
+- `git` - Version control
+- **NVM** - Node.js version manager (installed via script)
 
 ### Fonts & Theming
 - `ttf-roboto-mono-nerd` - Main font
@@ -139,6 +147,7 @@ If you prefer manual setup or want to install specific components:
    ```bash
    cp -r alacritty fastfetch nvim picom polybar qtile rofi btop gtk-2.0 gtk-3.0 ~/.config/
    cp user-dirs.dirs mimeapps.list ~/.config/
+   cp .zshrc ~/
    ```
 
 4. **Make scripts executable**:
@@ -161,9 +170,11 @@ Dotfiles/
 ├── polybar/            # Status bar config
 ├── qtile/              # Window manager config
 ├── rofi/               # Application launcher
+├── .zshrc              # Zsh shell configuration
 ├── mimeapps.list       # Default applications
 ├── user-dirs.dirs      # XDG directories
 ├── setup.sh           # Automated setup script
+├── update.sh           # Configuration sync script
 └── README.md          # This file
 ```
 
@@ -187,7 +198,8 @@ After running the setup script:
 2. **Add wallpapers** to `~/Wallpapers/`
 3. **Start Qtile**: `qtile start` or configure a display manager
 4. **Test key bindings** to ensure everything works
-5. **Customize** configurations in `~/.config/` as needed
+5. **Install Node.js**: Use `nvm install node` to install the latest Node.js
+6. **Customize** configurations in `~/.config/` and `~/.zshrc` as needed
 
 ## 🤝 Contributing
 

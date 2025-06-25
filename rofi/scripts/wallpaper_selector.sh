@@ -23,6 +23,4 @@ if [ -n "$selected_file" ]; then
     # Update both 'wallpaper =' and 'wallpaper2 =' lines in config.py
     sed -i -E "s|^(wallpaper[0-9]? = )os\.path\.expanduser\(\"[^\"]+\"\)|\1os.path.expanduser(\"$escaped_path\")|g" "$qtile_config"
 
-    # Reload Qtile to apply config (optional)
-    qtile cmd-obj -o cmd -f reload_config
 fi

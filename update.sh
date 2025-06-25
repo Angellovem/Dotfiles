@@ -72,6 +72,9 @@ done
 # Update individual config files
 config_files=("user-dirs.dirs" "mimeapps.list")
 
+# Update home directory files
+home_files=(".zshrc")
+
 for file in "${config_files[@]}"; do
     if [[ -f "$HOME/.config/$file" ]]; then
         if [[ -f "$DOTFILES_DIR/$file" ]]; then
@@ -89,6 +92,27 @@ for file in "${config_files[@]}"; do
         fi
     else
         print_warning "$HOME/.config/$file does not exist, skipping..."
+    fi
+done
+
+# Update home directory files
+for file in "${home_files[@]}"; do
+    if [[ -f "$HOME/$file" ]]; then
+        if [[ -f "$DOTFILES_DIR/$file" ]]; then
+            if ! diff "$HOME/$file" "$DOTFILES_DIR/$file" &>/dev/null; then
+                print_status "Updating $file..."
+                cp "$HOME/$file" "$DOTFILES_DIR/"
+                print_success "$file updated"
+            else
+                print_status "$file is already up to date"
+            fi
+        else
+            print_status "Adding new $file..."
+            cp "$HOME/$file" "$DOTFILES_DIR/"
+            print_success "$file added"
+        fi
+    else
+        print_warning "$HOME/$file does not exist, skipping..."
     fi
 done
 

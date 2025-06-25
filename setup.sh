@@ -90,6 +90,7 @@ PACKAGES=(
     # Development
     "neovim"
     "git"
+    "go"
     
     # Graphics and theming
     "gtk2"
@@ -196,6 +197,22 @@ if [[ ! -d ~/.oh-my-zsh ]]; then
     print_success "Oh My Zsh installed"
 fi
 
+# Copy zsh configuration
+if [[ -f "$DOTFILES_DIR/.zshrc" ]]; then
+    print_status "Copying zsh configuration..."
+    cp "$DOTFILES_DIR/.zshrc" ~/
+    print_success "Zsh configuration copied"
+fi
+
+# Install NVM (Node Version Manager) if not present
+if [[ ! -d ~/.nvm ]]; then
+    print_status "Installing NVM (Node Version Manager)..."
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    print_success "NVM installed (restart shell to use)"
+else
+    print_success "NVM is already installed"
+fi
+
 # Set up git (if not already configured)
 if ! git config --global user.name &> /dev/null; then
     print_status "Setting up git configuration..."
@@ -213,19 +230,21 @@ print_status "Performing final setup steps..."
 fc-cache -fv
 
 print_success "Setup completed successfully!"
-print_status "Please reboot your system to ensure all changes take effect."
-print_status "After reboot, you can start Qtile by running 'qtile start' or setting up a display manager."
+print_status "Please restart your shell or run 'source ~/.zshrc' to load the new configuration."
+print_status "After that, you can start Qtile by running 'qtile start' or setting up a display manager."
 
 echo
 print_status "Quick start guide:"
-echo "1. Reboot your system"
-echo "2. Log in and start Qtile (qtile start)"
-echo "3. Use Mod+d to open application launcher"
-echo "4. Use Mod+Return to open terminal"
-echo "5. Check the README.md for complete key bindings"
+echo "1. Restart your shell: 'exec zsh' or open a new terminal"
+echo "2. Install Node.js: 'nvm install node' (after shell restart)"
+echo "3. Start Qtile: 'qtile start' or configure a display manager"
+echo "4. Use Mod+d to open application launcher"
+echo "5. Use Mod+Return to open terminal"
+echo "6. Check the README.md for complete key bindings"
 
 echo
 print_warning "Don't forget to:"
 echo "- Add wallpapers to ~/Wallpapers/"
-echo "- Customize configurations in ~/.config/ as needed"
+echo "- Install Node.js with 'nvm install node'"
+echo "- Customize configurations in ~/.config/ and ~/.zshrc as needed"
 echo "- Install additional software based on your needs" 

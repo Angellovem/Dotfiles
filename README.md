@@ -1,4 +1,4 @@
-# Angel's Arch Linux Dotfiles
+# Angel's Arch Linux Dotfiles (SETUP SCRIPT WORKS FUNNY NOW)
 
 This Qtile configuration is tailored to enhance my personal workflow, drawing inspiration from various configurations found online and customized to meet my needs. It's not designed to be a one-size-fits-all solution, but rather a reflection of my preferences for a more efficient and enjoyable desktop experience.
 
